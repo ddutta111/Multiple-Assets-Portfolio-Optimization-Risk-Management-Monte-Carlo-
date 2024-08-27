@@ -60,3 +60,9 @@ fredapi
 ## Conclusion
 
 The optimized portfolio strategy is conservative, focusing on bonds and global equities to minimize risk while achieving decent returns. The VaR analysis provides insights into potential losses, helping in making informed investment decisions.
+
+## Author
+
+Debolina Dutta
+
+LinkedIn: (https://www.linkedin.com/in/duttadebolina/)
