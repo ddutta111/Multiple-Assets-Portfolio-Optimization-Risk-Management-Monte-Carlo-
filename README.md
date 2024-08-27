@@ -43,8 +43,11 @@ fredapi
 
 ## Usage
 **1. Run Portfolio Optimization:**
+
 - Calculate and display optimal asset weights, expected annual return, portfolio volatility, and Sharpe ratio.
+  
 **2. Monte Carlo Simulation for VaR:**
+
 - Estimate the Value at Risk over a 5-day period at a 95% confidence level.
 
 ## Results
