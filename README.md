@@ -32,14 +32,21 @@ This project focuses on optimizing a diversified portfolio and assessing its ris
 - Histogram of simulated portfolio returns with VaR indicated.
 
 **Installation**
+
 To run this project, you need the following Python libraries:
 
 yfinance 
+
 pandas 
+
 numpy 
+
 scipy 
-matplotlib 
+
+matplotlib
+
 fredapi
+
 
 ## Usage
 **1. Run Portfolio Optimization:**
