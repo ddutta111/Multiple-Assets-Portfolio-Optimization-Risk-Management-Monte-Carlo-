@@ -13,7 +13,7 @@ This project focuses on optimizing a diversified portfolio and assessing its ris
 
 ## Project Structure
 
-** 1. Data Collection:**
+**1. Data Collection:**
 
 - Download historical data for selected tickers (UKX, SPY, GLD, QQQ, BND, MSCI, VTI) using yfinance.
 - Time range: Last 10 years.
