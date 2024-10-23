@@ -13,16 +13,48 @@ This project focuses on optimizing a diversified portfolio and assessing its ris
 
 ## Project Structure
 
-**1. Data Collection:**
+**1. Importing Necessary Libraries and Data Collection:**
 
 - Download historical data for selected tickers (UKX, SPY, GLD, QQQ, BND, MSCI, VTI) using yfinance.
 - Time range: Last 10 years.
+```python
+#importing libraries
+import yfinance as yf
+import pandas as pd
+from datetime import datetime, timedelta
+import numpy as np
+from scipy.stats import norm
+from scipy.optimize import minimize
+import matplotlib.pyplot as plt
 
+#Defining tickers and time range
+tickers = ['UKX', 'SPY', 'GLD', 'QQQ', 'BND', 'MSCI', 'VTI']
+#Setting up the end date to Today
+end_date = datetime.today()
+#Setting up the starting date 10 years ago
+start_date = end_date - timedelta(days = 10*365)
+
+#Downloding adjusted closing prices in a data frame
+adj_close_df = pd.DataFrame()
+for ticker in tickers:
+    data = yf.download(ticker, start = start_date,end = end_date)
+    adj_close_df[ticker] = data['Adj Close']
+print(adj_close_df)
+```
 **2. Portfolio Optimization:**
 - Calculate log returns and covariance matrix of the assets.
 - Optimize the portfolio to maximize the Sharpe ratio using scipy.optimize.minimize.
 - Analyze the optimal portfolio, including expected return, volatility, and Sharpe ratio.
+```python
+#Calculating log-returns
+log_returns = np.log(adj_close_df / adj_close_df.shift(1))
+#Taking care of missing values
+log_returns = log_returns.dropna()
 
+#Calculating the Co-Variance Matrix
+cov_matrix = log_returns.cov()*252
+print(cov_matrix)
+```
 **3. Risk Measurement:**
 - Perform Monte Carlo simulations (20,000 runs) to estimate portfolio gains and losses.
 - Calculate the VaR at a 95% confidence level over a 5-day period.
