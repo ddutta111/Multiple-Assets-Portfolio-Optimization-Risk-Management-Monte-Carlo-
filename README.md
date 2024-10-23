@@ -193,6 +193,8 @@ In conclusion, the multi-asset portfolio optimization reveals a strategy that ba
 
 Additionally, the Monte Carlo simulation-based Value at Risk (VaR) of $69,744.52 at a 95% confidence level over a 5-day period highlights the portfolio’s downside risk, implying a 5% chance that losses could exceed this amount during the period. Overall, this portfolio offers a strong return potential with a well-balanced risk profile. helping in making informed investment decisions.
 
+(Note: Please check the Google Colab Notebook to see detailed explanation and plots of this project)
+
 ## Author
 
 Debolina Dutta
